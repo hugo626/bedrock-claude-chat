@@ -30,7 +30,7 @@ from app.user import User
 from app.utils import start_codebuild_project
 
 logger = logging.getLogger(__name__)
-REGION = os.environ.get("REGION", "us-east-1")
+REGION = os.environ.get("REGION", "ap-southeast-2")
 
 
 def _fetch_bot_with_permission_check(user: User, bot_id: str) -> BotModel:

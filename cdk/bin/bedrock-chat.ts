@@ -49,7 +49,7 @@ const ENABLE_BEDROCK_CROSS_REGION_INFERENCE: boolean = app.node.tryGetContext(
 const waf = new FrontendWafStack(app, `FrontendWafStack`, {
   env: {
     // account: process.env.CDK_DEFAULT_ACCOUNT,
-    region: "us-east-1",
+    region: "ap-southeast-2",
   },
   allowedIpV4AddressRanges: ALLOWED_IP_V4_ADDRESS_RANGES,
   allowedIpV6AddressRanges: ALLOWED_IP_V6_ADDRESS_RANGES,
@@ -74,7 +74,8 @@ const bedrockRegionResources = new BedrockRegionResourcesStack(
 const chat = new BedrockChatStack(app, `BedrockChatStack`, {
   env: {
     // account: process.env.CDK_DEFAULT_ACCOUNT,
-    region: process.env.CDK_DEFAULT_REGION,
+    // region: process.env.CDK_DEFAULT_REGION,
+    region: "ap-southeast-2",
   },
   crossRegionReferences: true,
   bedrockRegion: BEDROCK_REGION,

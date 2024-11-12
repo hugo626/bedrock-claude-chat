@@ -20,8 +20,8 @@ poetry install
 ```sh
 export TABLE_NAME=BedrockChatStack-DatabaseConversationTablexxxx
 export ACCOUNT=yyyy
-export REGION=ap-northeast-1
-export BEDROCK_REGION=us-east-1
+export REGION=ap-southeast-2
+export BEDROCK_REGION=ap-southeast-2
 export DOCUMENT_BUCKET=bedrockchatstack-documentbucketxxxxxxx
 export LARGE_MESSAGE_BUCKET=bedrockchatstack-largemessagebucketxxx
 export USER_POOL_ID=xxxxxxxxx

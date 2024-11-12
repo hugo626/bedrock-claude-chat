@@ -28,6 +28,7 @@ class InternetSearchInput(BaseModel):
             "es-es",
             "it-it",
             "us-en",
+            "au-en",
         ]:
             raise ValueError(
                 f"Country must be one of: jp-jp (Japan), kr-kr (Korea), cn-zh (China), fr-fr (France), de-de (Germany), es-es (Spain), it-it (Italy), us-en (United States)"

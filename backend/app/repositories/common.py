@@ -6,7 +6,7 @@ import boto3
 DDB_ENDPOINT_URL = os.environ.get("DDB_ENDPOINT_URL")
 TABLE_NAME = os.environ.get("TABLE_NAME", "")
 ACCOUNT = os.environ.get("ACCOUNT", "")
-REGION = os.environ.get("REGION", "ap-northeast-1")
+REGION = os.environ.get("REGION", "ap-southeast-2")
 TABLE_ACCESS_ROLE_ARN = os.environ.get("TABLE_ACCESS_ROLE_ARN", "")
 TRANSACTION_BATCH_SIZE = 25
 

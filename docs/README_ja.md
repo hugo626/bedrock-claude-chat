@@ -161,8 +161,8 @@ cdk deploy --require-approval never --all
 
 Outputs:
 BedrockChatStack.AuthUserPoolClientIdXXXXX = xxxxxxx
-BedrockChatStack.AuthUserPoolIdXXXXXX = ap-northeast-1_XXXX
-BedrockChatStack.BackendApiBackendApiUrlXXXXX = https://xxxxx.execute-api.ap-northeast-1.amazonaws.com
+BedrockChatStack.AuthUserPoolIdXXXXXX = ap-southeast-2_XXXX
+BedrockChatStack.BackendApiBackendApiUrlXXXXX = https://xxxxx.execute-api.ap-southeast-2.amazonaws.com
 BedrockChatStack.FrontendURL = https://xxxxx.cloudfront.net
 ```
 

@@ -22,7 +22,7 @@ describe("Bedrock Chat Stack Test", () => {
       "BedrockRegionResourcesStack",
       {
         env: {
-          region: "us-east-1",
+          region: "ap-southeast-2",
         },
         crossRegionReferences: true,
       }
@@ -33,9 +33,9 @@ describe("Bedrock Chat Stack Test", () => {
       "IdentityProviderGenerateStack",
       {
         env: {
-          region: "us-west-2",
+          region: "ap-southeast-2",
         },
-        bedrockRegion: "us-east-1",
+        bedrockRegion: "ap-southeast-2",
         crossRegionReferences: true,
         webAclId: "",
         identityProviders: [

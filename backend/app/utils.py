@@ -11,8 +11,8 @@ from botocore.exceptions import ClientError
 
 logger = logging.getLogger(__name__)
 
-REGION = os.environ.get("REGION", "us-east-1")
-BEDROCK_REGION = os.environ.get("BEDROCK_REGION", "us-east-1")
+REGION = os.environ.get("REGION", "ap-southeast-2")
+BEDROCK_REGION = os.environ.get("BEDROCK_REGION", "ap-southeast-2")
 PUBLISH_API_CODEBUILD_PROJECT_NAME = os.environ.get(
     "PUBLISH_API_CODEBUILD_PROJECT_NAME", ""
 )

@@ -10,7 +10,7 @@ import boto3
 from app.repositories.custom_bot import find_public_bots_by_ids
 from app.repositories.models.usage_analysis import UsagePerBot, UsagePerUser
 
-REGION = os.environ.get("REGION", "us-east-1")
+REGION = os.environ.get("REGION", "ap-southeast-2")
 USAGE_ANALYSIS_DATABASE = os.environ.get(
     "USAGE_ANALYSIS_DATABASE", "bedrockchatstack_usage_analysis"
 )
@@ -21,7 +21,7 @@ USAGE_ANALYSIS_WORKGROUP = os.environ.get(
 USAGE_ANALYSIS_OUTPUT_LOCATION = os.environ.get(
     "USAGE_ANALYSIS_OUTPUT_LOCATION", "s3://bedrockchatstack-athena-results"
 )
-USER_POOL_ID = os.environ.get("USER_POOL_ID", "us-east-1_XXXXXXXXX")
+USER_POOL_ID = os.environ.get("USER_POOL_ID", "ap-southeast-2_XXXXXXXXX")
 QUERY_LIMIT = 1000
 
 

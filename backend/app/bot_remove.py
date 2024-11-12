@@ -11,7 +11,7 @@ from app.repositories.api_publication import (
 from app.repositories.common import RecordNotFoundError, decompose_bot_id
 
 DOCUMENT_BUCKET = os.environ.get("DOCUMENT_BUCKET", "documents")
-BEDROCK_REGION = os.environ.get("BEDROCK_REGION", "us-east-1")
+BEDROCK_REGION = os.environ.get("BEDROCK_REGION", "ap-southeast-2")
 
 s3_client = boto3.client("s3", BEDROCK_REGION)
 

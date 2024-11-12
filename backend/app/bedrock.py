@@ -18,7 +18,7 @@ from typing_extensions import NotRequired, TypedDict, no_type_check
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-BEDROCK_REGION = os.environ.get("BEDROCK_REGION", "us-east-1")
+BEDROCK_REGION = os.environ.get("BEDROCK_REGION", "ap-southeast-2")
 ENABLE_MISTRAL = os.environ.get("ENABLE_MISTRAL", "false") == "true"
 DEFAULT_GENERATION_CONFIG = (
     DEFAULT_MISTRAL_GENERATION_CONFIG
@@ -330,6 +330,7 @@ def get_model_id(
         "eu-west-1": "eu",
         "eu-central-1": "eu",
         "eu-west-3": "eu",
+        "ap-southeast-2":"au",
     }
 
     base_model_id = base_model_ids.get(model)

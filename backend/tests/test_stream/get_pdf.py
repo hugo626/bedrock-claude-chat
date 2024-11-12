@@ -23,7 +23,7 @@ def get_pdf_info(url) -> tuple[str, str]:
 
 def get_aws_overview() -> tuple[str, str]:
     # Get the AWS Activate General 4 PDF as base64 encoded string
-    URL = "https://aws-startup.s3.ap-northeast-1.amazonaws.com/Activate/AWS_Activate_General_4.pdf"
+    URL = "https://aws-startup.s3.ap-southeast-2.amazonaws.com/Activate/AWS_Activate_General_4.pdf"
     return get_pdf_info(URL)
 
 
