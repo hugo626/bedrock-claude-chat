@@ -49,7 +49,8 @@ const ENABLE_BEDROCK_CROSS_REGION_INFERENCE: boolean = app.node.tryGetContext(
 const waf = new FrontendWafStack(app, `FrontendWafStack`, {
   env: {
     // account: process.env.CDK_DEFAULT_ACCOUNT,
-    region: "ap-southeast-2",
+    region: "us-east-1",
+    // region: "ap-southeast-2",
   },
   allowedIpV4AddressRanges: ALLOWED_IP_V4_ADDRESS_RANGES,
   allowedIpV6AddressRanges: ALLOWED_IP_V6_ADDRESS_RANGES,
