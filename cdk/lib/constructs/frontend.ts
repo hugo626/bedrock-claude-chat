@@ -16,7 +16,7 @@ import { Idp } from "../utils/identity-provider";
 import { NagSuppressions } from "cdk-nag";
 
 export interface FrontendProps {
-  readonly webAclId: string;
+  // readonly webAclId: string;
   readonly enableMistral: boolean;
   readonly accessLogBucket?: IBucket;
   readonly enableIpV6: boolean;
@@ -76,7 +76,7 @@ export class Frontend extends Construct {
           prefix: "Frontend/",
         },
       }),
-      webACLId: props.webAclId,
+      // webACLId: props.webAclId,
       enableIpV6: props.enableIpV6,
     });
 
