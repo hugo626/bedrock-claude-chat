@@ -46,15 +46,15 @@ const ENABLE_BEDROCK_CROSS_REGION_INFERENCE: boolean = app.node.tryGetContext(
 // WAF for frontend
 // 2023/9: Currently, the WAF for CloudFront needs to be created in the North America region (us-east-1), so the stacks are separated
 // https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html
-const waf = new FrontendWafStack(app, `FrontendWafStack`, {
-  env: {
-    // account: process.env.CDK_DEFAULT_ACCOUNT,
-    region: "us-east-1",
-    // region: "ap-southeast-2",
-  },
-  allowedIpV4AddressRanges: ALLOWED_IP_V4_ADDRESS_RANGES,
-  allowedIpV6AddressRanges: ALLOWED_IP_V6_ADDRESS_RANGES,
-});
+// const waf = new FrontendWafStack(app, `FrontendWafStack`, {
+//   env: {
+//     // account: process.env.CDK_DEFAULT_ACCOUNT,
+//     region: "us-east-1",
+//     // region: "ap-southeast-2",
+//   },
+//   allowedIpV4AddressRanges: ALLOWED_IP_V4_ADDRESS_RANGES,
+//   allowedIpV6AddressRanges: ALLOWED_IP_V6_ADDRESS_RANGES,
+// });
 
 // The region of the LLM model called by the converse API and the region of Guardrail must be in the same region.
 // CustomBotStack contains Knowledge Bases is deployed in the same region as the LLM model, and source bucket must be in the same region as Knowledge Bases.
@@ -80,8 +80,8 @@ const chat = new BedrockChatStack(app, `BedrockChatStack`, {
   },
   crossRegionReferences: true,
   bedrockRegion: BEDROCK_REGION,
-  webAclId: waf.webAclArn.value,
-  enableIpV6: waf.ipV6Enabled,
+  // webAclId: waf.webAclArn.value,
+  enableIpV6: false,
   identityProviders: IDENTITY_PROVIDERS,
   userPoolDomainPrefix: USER_POOL_DOMAIN_PREFIX,
   publishedApiAllowedIpV4AddressRanges:
@@ -96,5 +96,5 @@ const chat = new BedrockChatStack(app, `BedrockChatStack`, {
   useStandbyReplicas: USE_STAND_BY_REPLICAS,
   enableBedrockCrossRegionInference: ENABLE_BEDROCK_CROSS_REGION_INFERENCE,
 });
-chat.addDependency(waf);
+// chat.addDependency(waf);
 chat.addDependency(bedrockRegionResources);
